@@ -1,9 +1,4 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_intro/flutter_intro.dart';
-import 'package:teste_intro_flutter/custom_widgets/custom_theme_widget_builder.dart';
-
 import 'home_screen/home_screen.dart';
 
 void main() {
@@ -41,7 +36,7 @@ class StartPage extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (BuildContext context) => MyHomePage(
                       title: 'Flutter Intro',
-                      mode: Mode.customTheme,
+                      mode: Mode.guia,
                     ),
                   ),
                 );

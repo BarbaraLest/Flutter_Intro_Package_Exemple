@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_intro/flutter_intro.dart';
 import 'package:teste_intro_flutter/custom_widgets/custom_theme_widget_builder.dart';
 
-enum Mode { customTheme }
+enum Mode { guia, paginaNormal}
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({
@@ -26,10 +26,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Intro intro;
 
-  _MyHomePageState({
-    Mode mode,
-  }) {
-    if (mode == Mode.customTheme) {
+  _MyHomePageState({Mode mode,}) {
+    if (mode == Mode.guia) {
       intro = Intro(
         stepCount: 4,
         widgetBuilder: customThemeWidgetBuilder,
@@ -57,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         // colocar a key e o indice nos widgets de acordo com a ordem de sua preferencia
-        key: intro.keys[0],
+        
+        key:  intro.keys[0],
         child: Icon(
           Icons.play_arrow,
         ),
